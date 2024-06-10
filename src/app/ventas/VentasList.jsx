@@ -1,7 +1,8 @@
 import Venta from "./Venta";
 export default function VentasList(props){
     return (
-            props.ventas.map((venta) =>{
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-4 lg:gap-8">
+            {props.ventas.map((venta) =>{
                 return(
                     <Venta 
                         id={venta["_id"]}
@@ -12,6 +13,7 @@ export default function VentasList(props){
                         items={venta.items}
                     />
                 );
-            })
+            })}
+        </div>
     );
 }
