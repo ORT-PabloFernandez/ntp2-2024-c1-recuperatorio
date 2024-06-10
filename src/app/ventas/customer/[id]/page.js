@@ -5,9 +5,10 @@ import Customer from "./Customer";
 import { useEffect, useState } from "react";
 
 export default function CustomerPage({ params }){
-    const { id } = params;
-    const [customer, setCustomer] = useState([]);
-    const url = "https://salesbackend.azurewebsites.net/api/sales?pageSize=100&page=1";
+  const { id } = params;
+  const [customer, setCustomer] = useState([]);
+  const url =
+    "https://salesbackend.azurewebsites.net/api/sales?pageSize=100&page=1";
 
   useEffect(() => {
     fetch(url)
@@ -19,13 +20,12 @@ export default function CustomerPage({ params }){
       .catch((error) => console.log(error));
   }, []);
 
-
-    return (
-      <Customer 
+  return (
+    <Customer
       gender={customer.gender}
-        age={customer.age}
-        email={customer.email}
-        satisfaction={customer.satisfaction}
-      />
-    );
+      age={customer.age}
+      email={customer.email}
+      satisfaction={customer.satisfaction}
+    />
+  );
 }

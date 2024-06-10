@@ -1,5 +1,6 @@
 "use client";
 import ItemList from "./ItemList";
+import Link from 'next/link';
 
 import { useEffect, useState } from "react";
 
@@ -19,5 +20,15 @@ export default function ItemPage({ params }) {
       .catch((error) => console.log(error));
   }, []);
 
-  return <ItemList items={items} />;
+  return (
+    <div>
+       <Link 
+                href="/ventas"
+                className="inline-block rounded bg-indigo-600 px-8 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:bg-indigo-500"
+              >
+                Volver a Ventas
+              </Link>
+      <ItemList items={items} />
+    </div>
+  );
 }
