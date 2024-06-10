@@ -1,0 +1,24 @@
+.sale-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.sale-item-client {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding-left: 20px;
+}
+.container-client {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.sale-details-client {
+    padding: 15px;
+    color: black;
+}

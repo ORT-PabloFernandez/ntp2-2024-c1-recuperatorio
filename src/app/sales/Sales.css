@@ -1,0 +1,156 @@
+body {
+    background-color: black;
+}
+
+.sale-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    list-style-type: none;
+}
+
+.sale-item {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+    .sale-item:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+.sale-poster {
+    width: 100%;
+    height: auto;
+}
+
+.sale-poster-image {
+    width: 100%;
+    height: auto;
+}
+
+.sale-details {
+    padding: 15px;
+    color: black;
+}
+
+.sale-title {
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+.sale-plot {
+    font-size: 0.9em;
+    color: #666;
+    text-decoration: none;
+}
+
+    .movie-title a, .movie-plot a {
+        text-decoration: none;
+        color: inherit; 
+    }
+
+.sale-grid-title {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2em;
+}
+
+@media (min-width: 768px) {
+    .sale-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .sale-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1280px) {
+    .sale-grid {
+        grid-template-columns: repeat(4, 1fr); 
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+    .button:disabled {
+        background-color: #d3d3d3;
+        cursor: not-allowed;
+    }
+
+.details-button {
+    background-color: #0070f3;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+    .details-button:hover {
+        background-color: #005bb5;
+    }
+    .buttonsContainer {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+    
+    button {
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: #5918c2;
+        color: white;
+        transition: background-color 0.3s ease;
+    }
+    
+    button:hover {
+        background-color: #2a0258;
+    }
+    .titulo {
+        color: #2c3e50; 
+        font-size: 36px; 
+        text-align: center; 
+        font-family: Arial, sans-serif; 
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+        background-color: #ecf0f1; 
+        padding: 20px; 
+        border-radius: 10px; 
+    }
+
+    .button-title {
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: #47062c;
+        color: white;
+        transition: background-color 0.3s ease;
+    }
+    .button-title:hover {
+        background-color: #a10e5f;
+    }
