@@ -1,0 +1,41 @@
+.customer-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #000000;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.customer-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.customer-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.customer-detail {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.customer-detail p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #d6d4d4;
+}
