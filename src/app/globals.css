@@ -18,16 +18,177 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  row-gap: 15px; /* Espacio entre filas */
+  column-gap: 15px; /* Espacio entre columnas */
+  grid-template-columns: minmax(250px, auto);
+  grid-auto-rows: minmax(130px, auto); /* Ajustar el alto de las tarjetas */
+}
+
+/* Cards */
+.card {
+  box-sizing: border-box;
+  width: 100%; /* Ajustar automáticamente al contenedor */
+  height: auto; /* Ajustar automáticamente al contenido */
+  min-width: 250px; /* Ancho mínimo */
+  max-height: 150px;
+  background: rgba(217, 217, 217, 0.58);
+  border: 1px solid white;
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(6px);
+  border-radius: 17px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.5s;
+  display: flex;
+  padding-top: 15px;
+  padding-left: 20px;
+  align-items: start;
+  align-content: start;
+  justify-content: start;
+  user-select: none;
+  color: black;
+}
+
+.card:hover {
+  border: 1px solid black;
+  background: rgba(112, 150, 255, 0.58);
+  transform: scale(1.05);
+}
+
+.card:active {
+  transform: scale(0.95) rotateZ(1.7deg);
+}
+
+/* Buttons */
+button {
+  border: none;
+  color: #fff;
+  background-image: linear-gradient(30deg, #0400ff, #4ce3f7);
+  border-radius: 10px;
+  background-size: 100% auto;
+  font-family: inherit;
+  font-size: 17px;
+  padding: 0.6em 1.5em;
+}
+
+button:hover {
+  background-position: right center;
+  background-size: 200% auto;
+  -webkit-animation: pulse 2s infinite;
+  animation: pulse512 1.5s infinite;
+}
+
+@keyframes pulse512 {
+  0% {
+    box-shadow: 0 0 0 0 #05bada66;
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+  }
+}
+
+.button2 {
+  display: inline-block;
+  padding: 0.75rem 1.5rem; /* Equivalente a px-6 py-3 */
+  margin-right: 0.75rem; /* Equivalente a mr-3 */
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  text-transform: uppercase; /* Equivalente a uppercase */
+  vertical-align: middle; /* Equivalente a align-middle */
+  transition: all 0.3s; /* Equivalente a transition-all */
+  border-radius: 0.5rem; /* Equivalente a rounded-lg */
+  cursor: pointer;
+  background: linear-gradient(
+    to top left,
+    #8b5cf6,
+    #ff7b9c
+  ); /* Equivalente a bg-gradient-to-tl from-purple-700 to-pink-500 */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Equivalente a shadow-soft-md */
+  line-height: 1; /* Equivalente a leading-pro */
+  font-size: 0.75rem; /* Equivalente a text-xs */
+  transition-timing-function: cubic-bezier(
+    0.645,
+    0.045,
+    0.355,
+    1
+  ); /* Equivalente a ease-soft-in */
+  letter-spacing: -0.025em; /* Equivalente a tracking-tight-soft */
+  background-color: #8b5cf6; /* Equivalente a bg-150 */
+  background-position-x: -2rem; /* Equivalente a bg-x-25 */
+}
+
+.button2:hover {
+  transform: scale(1.1) rotate(2deg); /* Equivalente a hover:scale-110 hover:rotate-2 */
+  background-color: #ff7b9c; /* Equivalente a hover:bg-pink-700 */
+  color: #ff7b9c; /* Equivalente a hover:text-pink-200 */
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.2); /* Equivalente a hover:shadow-lg */
+}
+
+.button2:active {
+  opacity: 0.85; /* Equivalente a active:opacity-85 */
+}
+
+/*Loader*/
+.loader-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Añade un fondo semi-transparente para resaltar el loader */
+}
+.loader {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: transparent;
+  border-radius: 50%;
+}
+
+.loader {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: transparent;
+  width: 36px;
+  height: 36px;
+}
+
+.loader {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: transparent;
+  width: 36px;
+  height: 36px;
+  animation: spin89345 1s linear infinite;
+}
+
+@keyframes spin89345 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }
